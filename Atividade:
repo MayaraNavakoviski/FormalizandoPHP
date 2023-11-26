@@ -1,0 +1,215 @@
+            Exercício 1:
+   
+
+      $numeros[3] = [1, 22, 333];
+      
+      for($i=0; $i < 3; $i++){
+          print(numeros[$i], "-");
+      }
+
+               Memória:
+              0 – 1 - 2
+
+              Console:
+             1 – 22 - 333
+
+
+                  
+                  Exercício 2:
+
+
+       $sete_maravilhas[7] = [
+           "Cristo Redentor",
+           "Chichén Itzá",
+           "Coliseu",
+           "Muralha da China",
+           "Petra",
+           "Machu Picchu",
+          "Taj Mahal"
+       ];
+       
+       for($i=0; $i < 7; $i++){
+           print($i+1, ": ", $sete_maravilhas[$i], "\n");
+       }
+
+                     Memória:
+             0 - 1 - 2 - 3 - 4 - 5 - 6 
+
+                     Console:
+                1: Cristo Redentor
+                2: Chichén Itzá
+                3: Coliseu
+                4: Muralha da China
+                5: Petra
+                6: Machu Picchu
+                7: Taj Mahal
+
+
+                 Exercício 3:
+
+
+      $sete_maravilhas[7] = [
+           "Cristo Redentor",
+           "Chichén Itzá",
+           "Coliseu",
+           "Muralha da China",
+           "Petra",
+           "Machu Picchu",
+           "Taj Mahal"
+      ];
+     
+      $valor_buscado = "Coliseu";
+     
+      for($i=0; $i < 7; $i++){
+          if ($sete_maravilhas[$i] == $valor_buscado) {
+          print("o valor buscado está entre as maravilhas");
+          break;
+              }
+          }
+      }
+
+               Memória:
+              0 - 1 - 2
+
+               Console:
+             o valor buscado está entre as maravilhas
+
+
+               Exercício 4:
+
+
+      $mega_sena[6] = [33, 4, 47, 7, 11, 25];
+      $aux = 0;
+     
+      for($i=0; $i < 6; $i++){
+          for($j=0; $j < 5; $j++){
+              if($mega_sena[$j] > $mega_sena[$j + 1]){
+                 $aux = $mega_sena[$j]
+                 $mega_sena[$j] = $mega_sena[$j + 1]
+                 $mega_sena[$j + 1] = $aux
+                }
+           }
+       }
+       
+        for($i=0; $i < 6; $i++){
+           print($mega_sena[$i], " - ")
+        }
+
+                Memória:
+             0 - 1 - 2 - 3 - 4 - 5 
+
+                Console:
+             4 - 7 - 11 - 25 - 33 - 47
+
+
+                Exercício 5: 
+
+
+      Escreva um algoritmo que leia uma matriz de inteiros com 3 linhas
+   e 3 colunas, com valores já inicializados e mostre-os na tela,
+   separando as linhas.
+
+           $i = linha e $y = coluna
+
+            <?php
+
+                 $matriz[] = [
+                      "1, 2, 3",
+                      "4, 5, 6",
+                      "7, 8, 9,"
+                 ]
+
+                for($i = 0; $i < 3; $i++){
+                    for($y = 0; $y <3; $y++){
+                        print($matriz[$i][$y] . " ");
+                      }
+                 }
+
+
+               Exercício 6:
+
+      Escreva um algoritmo que leia uma matriz de inteiros com 3 linhas
+   e 3 colunas, com valores já inicializados, e mostre a soma na tela.
+
+               <?php
+
+                    $matriz[] = [
+                      "1, 2, 3",
+                      "4, 5, 6",
+                      "7, 8, 9,"
+                 ]
+
+                     $soma_totla = 0;
+                                       
+                     for($i = 0; $i < 3; $i++){
+                         for($y = 0; $y <3; $y++){
+                             print($matriz[$i][$y] . " ");
+                             $soma_total = $soma_total + $matriz[$i][$y];
+                      }
+                 }
+                             print("A soma das linhas e das colunas é: " . $soma_total);
+
+
+               Exercício 7:
+
+      Escreva um algoritmo que leia uma matriz de inteiros com 3 linhas
+   e 5 colunas com valores informados pelo usuário. Ao final, mostre:
+   quais são os números pares digitados e a posição (linha, coluna) em
+   que eles foram armazenados.
+
+                 <?php
+
+                     $matriz = [];
+
+                     for($i = 0; $i < 3; $i++){
+                         for($y = 0; $y < 3; $y++){
+                             print("Informe um valor pra a posição [$i][$y]: ");
+                             $matriz[$i][$y] = intval(readline());
+                           }
+                        }
+
+                      print("Os números pares e suas posições: \n");
+
+                      for($i = 0; $i < 3; $i++){
+                          for($y = 0; $y < 3; $y++ ){
+                              if($matriz[$i][$y] % 2 == 0){
+                                 print($matriz[$i][$y] . " ");
+                                 print("Número par na posição $i e $y\n");
+                               }
+                            }
+                         }
+
+
+               Exercício 8:
+
+      Ao se executar o código abaixo, o que será mostrado no console?
+
+        $lista_frutas = ['banana', 'abacaxi', 'melão', 'morango'];
+        print "Teste 0: ";
+         var_dump(count($lista_frutas));
+        print "\nTeste 1: ";
+         var_dump(in_array('banana', $lista_frutas));
+        print "\nTeste 2: ";
+          var_dump(in_array('alface', $lista_frutas));
+        print "\nTeste 3: ";
+           var_dump(array_search('morango', $lista_frutas));
+        print "\nTeste 4: ";
+           var_dump(sort($lista_frutas));
+        print "\nTeste 5: ";
+           var_dump(shuffle($lista_frutas));
+
+
+      No console será mostrado:
+
+            Teste 0:
+             int(4) // var_dump: mostra informação da variavél - count: conta todos os elementos (neste exemplo retorna a quantidade de elementos que exite na lista, do tipo inteiro)
+            Teste 1:
+            bool(true) // var_dump: mostra informação da variavél - in_array: checa se um valor existe (neste exemplo procura um elemento, que é a banana e que foi encontrado, então retorna true)
+            Teste 2: 
+             bool(false) // var_dump: mostra informação da variavél - in_array: checa se um valor existe (neste exemplo procura um elemento, que é o alface e que não foi encontrado, então retorna false)
+            Teste 3:
+              int(3) // var_dump: mostra informação da variavél - array_search: retorna o valor que corresponde a chave procurada (neste exemplo pruca o elemento morango e retorna o valor que corresponde a seua chave )
+             Teste 4:
+               bool(true) // var_dump: mostra informação da variavél - sort: ordena os valores em ordem crescente (neste exemplo somente retorna true)
+             Teste 5:
+               bool(true) // var_dump: mostra informação da variavél - shuffle: embaralha (neste exemplo somente retorna true)

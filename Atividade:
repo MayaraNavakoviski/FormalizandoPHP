@@ -201,15 +201,66 @@
 
       No console será mostrado:
 
-            Teste 0:
-             int(4) // var_dump: mostra informação da variavél - count: conta todos os elementos (neste exemplo retorna a quantidade de elementos que exite na lista, do tipo inteiro)
-            Teste 1:
-            bool(true) // var_dump: mostra informação da variavél - in_array: checa se um valor existe (neste exemplo procura um elemento, que é a banana e que foi encontrado, então retorna true)
-            Teste 2: 
-             bool(false) // var_dump: mostra informação da variavél - in_array: checa se um valor existe (neste exemplo procura um elemento, que é o alface e que não foi encontrado, então retorna false)
-            Teste 3:
-              int(3) // var_dump: mostra informação da variavél - array_search: retorna o valor que corresponde a chave procurada (neste exemplo pruca o elemento morango e retorna o valor que corresponde a seua chave )
-             Teste 4:
-               bool(true) // var_dump: mostra informação da variavél - sort: ordena os valores em ordem crescente (neste exemplo somente retorna true)
-             Teste 5:
-               bool(true) // var_dump: mostra informação da variavél - shuffle: embaralha (neste exemplo somente retorna true)
+            Teste 0: int(4)
+            // var_dump: mostra informação da variavél - count: conta todos os elementos (neste exemplo retorna a quantidade de elementos que exite na lista, do tipo inteiro)
+            Teste 1: bool(true)
+            // var_dump: mostra informação da variavél - in_array: checa se um valor existe (neste exemplo procura um elemento, que é a "Banana" e que foi encontrado, então retorna true)
+            Teste 2: bool(false)
+            // var_dump: mostra informação da variavél - in_array: checa se um valor existe (neste exemplo procura um elemento, que é o "Alface" e que não foi encontrado, então retorna false)
+            Teste 3: int(3) 
+            // var_dump: mostra informação da variavél - array_search: retorna o valor que corresponde a chave procurada (neste exemplo procura o elemento "Morango" e retorna o valor que corresponde a seua chave )
+            Teste 4:  bool(true) 
+            // var_dump: mostra informação da variavél - sort: ordena os valores em ordem crescente (neste exemplo somente retorna true)
+             Teste 5: bool(true) 
+            // var_dump: mostra informação da variavél - shuffle: embaralha (neste exemplo somente retorna true)
+
+
+                 Exercício 9:
+
+     Ao se executar o código abaixo, o que será mostrado no console?
+   
+            $pessoa = [
+
+              'nome' => 'John Doe',
+              'idade' => 54,
+              'altura' => 1.8,
+              'formacao' => 'Físico',
+              'profissao' => 'Astronauta',
+            ];
+
+             print "Teste 0: ";
+              var_dump(count($pessoa));
+             print "\nTeste 1: ";
+              var_dump(in_array('Físico', $pessoa));
+             print "\nTeste 2: ";
+              var_dump(in_array('Detetive', $pessoa));
+             print "\nTeste 3: ";
+              var_dump(array_search('nome', $pessoa));
+             print "\nTeste 4: ";
+              var_dump(array_key_exists('profissao', $pessoa));
+             print "\nTeste 5: ";
+               var_dump(array_key_first($pessoa));
+             print "\nTeste 6: ";
+              var_dump(array_key_last($pessoa));
+             print "\nTeste 7: ";
+               var_dump(sort($pessoa));
+
+
+    No console será mostrado:
+
+       Teste 0: int(5)
+       // var_dump: mostra informação da variavél - count: conta todos os elementos (neste exemplo retorna a quantidade de elementos que exite na lista, do tipo inteiro)
+       Teste 1: bool(true)
+       // var_dump: mostra informação da variavél - in_array: checa se um valor existe (neste exemplo procura um elemento, que é "Fisíco" e que foi encontrado, então retorna true)
+       Teste 2: bool(false)
+       // var_dump: mostra informação da variavél - in_array: checa se um valor existe (neste exemplo procura um elemento, que é o "Detetive" e que não foi encontrado, então retorna false)
+       Teste 3: bool(false)
+       // var_dump: mostra informação da variavél - array_search: retorna o valor que corresponde a chave procurada (Não sei porque retournou falso)
+       Teste 4: bool(true)
+       // var_dump: mostra informação da variavél - array_key_exists: verifica se a chave ou índice fornecido existe no array (neste exemplo procura o elemento "Profissão" e retorna true )
+       Teste 5: string(4) "nome"
+       // var_dump: mostra informação da variavél - array_key_first: obtém a primeira chave de um array (neste exemplo procura o elemento "Nome" e retorna o número de caractertes desta palavra )
+       Teste 6: string(9) "profissao"
+       // var_dump: mostra informação da variavél - array_key_last: obtém a última chave de um array (neste exemplo procura o último elemento  e retorna o número de caractertes do último elemento )
+       Teste 7: bool(true)
+      // var_dump: mostra informação da variavél - sort: ordena os valores em ordem crescente (neste exemplo somente retorna true)

@@ -264,3 +264,37 @@
        // var_dump: mostra informação da variavél - array_key_last: obtém a última chave de um array (neste exemplo procura o último elemento  e retorna o número de caractertes do último elemento )
        Teste 7: bool(true)
       // var_dump: mostra informação da variavél - sort: ordena os valores em ordem crescente (neste exemplo somente retorna true)
+
+
+               Exercício 10:
+
+      Programe uma função em PHP que receba uma string e um caractere como
+   parâmetros. A função deve modificar a string original, removendo todas as
+   ocorrências desse caractere. O número de vezes que o caractere aparece na string
+   deve ser contado. Tanto a String quanto o caractere devem ser recebidos como
+   referência.
+
+           <?php
+
+                 print("Informe a frase que desejar: \n" );
+                 readline($frase);
+
+                 print("Informe um caractere que está presente na frase informada para remover: \n");
+                 readline($carac);
+
+                  print ("A frase a ser modificada é: " . $frase . "\n");
+                  print ("O caractere a ser retirado é: " . $carac . "\n");
+
+                   modificador($frase, $carac);
+
+                   print "A frase informada ppassa a ser: " . $frase . "\n";
+
+                   function modificador(&$string, &$carac) {
+                                                
+                            $quant_vezes_apareceu = substr_count($string, $carac);
+                            $string = str_replace($carac, '', $string);
+        
+                             print ("A string apareceu " . $quant_vezes_apareceu  . " vezes." . "\n");
+                     }
+
+                  
